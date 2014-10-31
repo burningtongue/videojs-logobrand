@@ -7,7 +7,7 @@
 	<script src="libs/video-js/video.js"></script>
 </head>
 	<body>
-		<video src="http://vjs.zencdn.net/v/oceans.mp4" class="video-js vjs-default-skin" data-setup="{}" controls width="580" height="320"></video>
+		<video src="http://vjs.zencdn.net/v/oceans.mp4" class="video-js vjs-default-skin" data-setup="{}" controls width="640" height="249"></video>
 		<button id="example">
 			Click Here
 		</button>
@@ -24,15 +24,15 @@
 			player.logobrand({
 				//height: "32px",
 				//width: "32px",
-				image: "http://www.videojs.com/img/logo.png",
-				destination: "http://www.videojs.com/"
+				image: "http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/img/raymonoclogo.png",
+				destination: "http://webmx.me/"
 			});
 			//player.logobrand().loadImage("http://instasynch.com/images/youtube.png");
 			//player.logobrand().setDestination("http://instasynch.com/images/youtube.png");
 
 			document.getElementById("example").onclick = function(){
-				player.logobrand().loadImage("http://instasynch.com/images/logoNoBG.png");
-				player.logobrand().setDestination("http://instasynch.com");
+				player.logobrand().loadImage("http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/img/webmxlogo.png");
+				player.logobrand().setDestination("http://webmx.co");
 				this.innerHTML = "Image+destination changed!";
 			};
 		</script>
