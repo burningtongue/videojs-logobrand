@@ -1,13 +1,17 @@
 <!doctype html>
 <html>
 <head>
-	<title>Video.js logobrand example</title>
-	<link rel="stylesheet" href="http://vjs.zencdn.net/video-js.css">
-	<link rel="stylesheet" href="https://raw.githubusercontent.com/burningtongue/videojs-sublime-skin/master/dist/videojs-sublime-skin.min.css">
-	<link rel="stylesheet" href="src/videojs.logobrand.css">
+   <title>Video.js logobrand example</title>
+   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"><link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet"><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script><!-- HTML5 shim, for IE6-8 support of HTML5 elements--><!--if lt IE 9script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+--><script src="//vjs.zencdn.net/4.8.5/video.js"></script><link href="//vjs.zencdn.net/4.8.5/video-js.css" rel="stylesheet">
+
+<!--	<link rel="stylesheet" href="https://raw.githubusercontent.com/burningtongue/videojs-sublime-skin/master/dist/videojs-sublime-skin.min.css">
+<script src="https://raw.githubusercontent.com/burningtongue/videojs-youtube-videowall/master/videojs.youtubeVideowall.js"></script>
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/burningtongue/videojs-youtube-videowall/master/videojs.youtubeVideowall.css">
+-->	<link rel="stylesheet" href="src/videojs.logobrand.css">
 	<script src="http://vjs.zencdn.net/video.js"></script>
 </head><body>
-		<video src="http://vjs.zencdn.net/v/oceans.mp4" class="video-js vjs-default-skin videojs-sublime-skin" data-setup="{}" controls width="640" height="249"></video>
+		<video src="http://vjs.zencdn.net/v/oceans.mp4" poster="http://vjs.zencdn.net/v/oceans.png" class="video-js vjs-default-skin" data-setup="{}" controls width="640" height="249"></video>
 		<button id="example">
 			Click 1
 		</button>
@@ -28,8 +32,8 @@
 
 			// initialize the plugin with some custom options:
 			player.logobrand({
-				height: "100%",
-				width: "100%",
+				height: "auto",
+				width: "auto",
 				image: "http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/img/webmx.png",
 				destination: "http://webmx.me/"
 			});
