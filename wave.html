@@ -1,0 +1,48 @@
+  <!doctype html>
+<html>
+<head>
+  <title>Wavesurfer Plugin for Video.js Example</title>
+
+  <link href="http://vjs.zencdn.net/4.6/video-js.css" rel="stylesheet">
+
+  <script src="http://vjs.zencdn.net/4.6/video.js"></script>
+  <script src="http://wavesurfer.fm/build/wavesurfer.min.js"></script>
+  <script src="https://raw.githubusercontent.com/burningtongue/videojs-wavesurfer/master/videojs.wavesurfer.js"></script>
+
+</head>
+<body>
+
+<script src="http://vjs.zencdn.net/4.6/video.js"></script>
+  <script src="http://wavesurfer.fm/build/wavesurfer.min.js"></script>
+  <script src="https://raw.githubusercontent.com/burningtongue/videojs-wavesurfer/master/videojs.wavesurfer.js"></script>
+
+</head>
+<body>
+
+<audio id="myAudio" class="video-js vjs-default-skin"></audio>
+
+<script>
+var player = videojs("myAudio",
+{
+    "controls": true,
+    "autoplay": true,
+    "loop": false,
+    "width": 600,
+    "height": 300,
+    "plugins": {
+        "wavesurfer": {
+            "src": "http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/audio/loser.wav",
+            "waveColor": "pink",
+            "progressColor": "grey",
+            "cursorColor": "#FFEEFF"
+        }
+    }
+});
+
+
+// change player background color
+player.el().style.backgroundColor = "#black";
+</script>
+
+</body>
+</html>
