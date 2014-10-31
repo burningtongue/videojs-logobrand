@@ -6,35 +6,7 @@
 	<link rel="stylesheet" href="https://raw.githubusercontent.com/burningtongue/videojs-sublime-skin/master/dist/videojs-sublime-skin.min.css">
 	<link rel="stylesheet" href="src/videojs.logobrand.css">
 	<script src="libs/video-js/video.js"></script>
-  <script src="http://vjs.zencdn.net/4.6/video.js"></script>
-  <script src="http://wavesurfer.fm/build/wavesurfer.min.js"></script>
-  <script src="../videojs.wavesurfer.js"></script>
 
-</head>
-<body>
-
-<audio id="myAudio" class="video-js vjs-default-skin"></audio>
-
-<script>
-var player = videojs("myAudio",
-{
-    "controls": true,
-    "autoplay": true,
-    "loop": false,
-    "width": 600,
-    "height": 300,
-    "plugins": {
-        "wavesurfer": {
-            "src": "http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/audio/loser.wav",
-            "waveColor": "pink",
-            "progressColor": "grey",
-            "cursorColor": "#FFEEFF"
-        }
-    }
-});
-
-// change player background color
-player.el().style.backgroundColor = "#black";
 </script>
 		<video src="http://vjs.zencdn.net/v/oceans.mp4" class="video-js vjs-default-skin videojs-sublime-skin" data-setup="{}" controls width="640" height="249"></video>
 		<button id="example">
