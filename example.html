@@ -3,13 +3,20 @@
 <head>
 	<title>Video.js logobrand example</title>
 	<link rel="stylesheet" href="libs/video-js/video-js.css">
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/burningtongue/videojs-sublime-skin/master/dist/videojs-sublime-skin.min.css">
 	<link rel="stylesheet" href="src/videojs.logobrand.css">
 	<script src="libs/video-js/video.js"></script>
 </head>
 	<body>
-		<video src="http://vjs.zencdn.net/v/oceans.mp4" class="video-js vjs-default-skin" data-setup="{}" controls width="640" height="249"></video>
+		<video src="http://vjs.zencdn.net/v/oceans.mp4" class="video-js vjs-default-skin videojs-sublime-skin" data-setup="{}" controls width="640" height="249"></video>
 		<button id="example">
-			Click Here
+			Click 1
+		</button>
+		<button id="example2">
+			Click 2
+		</button>
+		<button id="example3">
+			Click 3
 		</button>
 		<script src="src/videojs.logobrand.js"></script>
 		<script>
@@ -22,15 +29,25 @@
 
 			// initialize the plugin with some custom options:
 			player.logobrand({
-				height: "100px",
-				width: "100px",
-				image: "http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/img/raymonoclogo.png",
+				height: "auto",
+				width: "auto",
+				image: "http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/img/webmx.png",
 				destination: "http://webmx.me/"
 			});
 			//player.logobrand().loadImage("http://instasynch.com/images/youtube.png");
 			//player.logobrand().setDestination("http://instasynch.com/images/youtube.png");
 
 			document.getElementById("example").onclick = function(){
+				player.logobrand().loadImage("http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/img/webmx.png");
+				player.logobrand().setDestination("http://webmx.co");
+				this.innerHTML = "Image+destination changed!";
+			};
+			document.getElementById("example2").onclick = function(){
+				player.logobrand().loadImage("http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/img/raymonoclogo.png");
+				player.logobrand().setDestination("http://webmx.co");
+				this.innerHTML = "Image+destination changed!";
+			};
+			document.getElementById("example3").onclick = function(){
 				player.logobrand().loadImage("http://webmx-cdn-static.s3-website-us-west-2.amazonaws.com/assets/img/webmxlogo.png");
 				player.logobrand().setDestination("http://webmx.co");
 				this.innerHTML = "Image+destination changed!";
